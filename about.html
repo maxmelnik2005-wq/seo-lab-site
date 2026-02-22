@@ -1,42 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>About Our SEO Lab Project | Team & Goals | SEO Lab</title>
-  <meta name="description" content="Learn what this SEO Lab project is about: goals, tasks and how we practice on-page optimization, technical audit and structured data. Explore the site sections." />
-
+  <title>About This SEO Lab Project | Goals & Practice Tasks | SEO Lab</title>
+  <meta name="description" content="Learn what this SEO Lab project is about: goals, tasks and how we practice on-page optimization, technical audit basics and structured data validation." />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://maxmelnik2005-wq.github.io/seo-lab-site/about.html" />
+
+  <!-- Optional Structured Data: AboutPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About This SEO Lab Project",
+    "url": "https://maxmelnik2005-wq.github.io/seo-lab-site/about.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "SEO Lab Test Website",
+      "url": "https://maxmelnik2005-wq.github.io/seo-lab-site/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SEO Lab"
+    }
+  }
+  </script>
 </head>
 
 <body>
-<header>
-  <h1>About Our Project</h1>
-  <nav>
-    <a href="index.html">Home</a> |
-    <a href="services.html">Services</a> |
-    <a href="blog.html">Blog</a>
-  </nav>
-</header>
+  <header>
+    <h1>About Our Project</h1>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="services.html">Services</a> |
+      <a href="blog.html">Blog</a>
+    </nav>
+    <hr />
+  </header>
 
-<hr>
+  <main>
+    <p>
+      This website is a small lab project for practicing SEO tasks: metadata optimization, internal linking and Schema.org structured data.
+    </p>
 
-<section>
-  <p>
-    This website is a small учебний проєкт for practicing SEO tasks:
-    metadata optimization, internal linking and Schema.org structured data.
-  </p>
+    <h2>What you can do here</h2>
+    <ul>
+      <li>Review optimized titles and meta descriptions</li>
+      <li>Explore internal linking between pages and posts</li>
+      <li>Validate structured data in Google Rich Results Test</li>
+    </ul>
 
-  <p>
-    Explore our <a href="services.html">SEO services page</a> and read the
-    <a href="blog.html">SEO blog articles</a> to see practical examples.
-  </p>
-</section>
+    <p>
+      Explore our <a href="services.html">SEO services page</a> and read <a href="blog.html">SEO blog articles</a> for practical examples.
+    </p>
+  </main>
 
-<footer>
-  <p>© 2026 SEO Lab Project</p>
-</footer>
+  <footer>
+    <hr />
+    <p>© 2026 SEO Lab Project</p>
+  </footer>
 </body>
 </html>
 
