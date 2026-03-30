@@ -1,21 +1,19 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>On-Page SEO Practice | Meta, Schema & Links | SEO Lab</title>
-  <meta name="description" content="Practice on-page SEO: optimized titles, meta descriptions, schema markup and internal linking." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://maxmelnik2005-wq.github.io/seo-lab-site/" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO Lab Test Website</title>
+  <meta name="description" content="Practice on-page SEO, image optimization, lazy loading, robots.txt and sitemap.xml.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://maxmelnik2005-wq.github.io/seo-lab-site/">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "SEO Lab Test Website",
-    "url": "https://maxmelnik2005-wq.github.io/seo-lab-site/",
-    "description": "SEO lab website for practicing on-page optimization, technical audit basics and structured data implementation"
+    "url": "https://maxmelnik2005-wq.github.io/seo-lab-site/"
   }
   </script>
 
@@ -26,126 +24,47 @@
       max-width: 1000px;
       margin: 0 auto;
       padding: 20px;
-      color: #222;
-      background: #fff;
-    }
-
-    header, footer {
-      margin-bottom: 24px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #0056b3;
-      margin-right: 8px;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    h1, h2 {
-      color: #111;
-    }
-
-    .section-box {
-      padding: 20px;
-      margin: 24px 0;
-      background: #f7f9fc;
-      border: 1px solid #dbe3ee;
-      border-radius: 10px;
     }
 
     img {
-      width: 100%;
       max-width: 100%;
       height: auto;
       display: block;
-      border-radius: 10px;
       margin-top: 16px;
     }
 
-    .large-spacer {
-      height: 2600px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #666;
-      font-size: 18px;
-      text-align: center;
+    .spacer {
+      height: 2500px;
     }
   </style>
 </head>
-
 <body>
-  <header>
-    <h1>SEO Lab Test Website</h1>
-    <nav aria-label="Main navigation">
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="services.html">Services</a> |
-      <a href="services-copy.html">Services Copy</a> |
-      <a href="blog.html">Blog</a> |
-      <a href="old-page.html">Old Page</a>
-    </nav>
-    <hr />
-  </header>
+  <h1>SEO Lab Test Website</h1>
 
-  <main>
-    <section class="section-box">
-      <h2>Welcome</h2>
-      <p>This website was created for SEO on-page optimization practice.</p>
+  <p>This website was created for SEO on-page optimization practice.</p>
 
-      <h2>Start Here</h2>
-      <ul>
-        <li><a href="services.html">SEO services and examples</a></li>
-        <li><a href="blog.html">SEO blog guides</a></li>
-      </ul>
+  <h2>Navigation</h2>
+  <p>
+    <a href="about.html">About</a> |
+    <a href="services.html">Services</a> |
+    <a href="blog.html">Blog</a>
+  </p>
 
-      <h2>Latest Articles</h2>
-      <ul>
-        <li><a href="blog-post1.html">What is SEO?</a></li>
-        <li><a href="blog-post2.html">Technical Audit Basics</a></li>
-      </ul>
-    </section>
+  <h2>Hero Image</h2>
+  <picture>
+    <source srcset="seo-hero.webp" type="image/webp">
+    <img src="seo-hero.jpg" alt="SEO hero image" width="1200" height="630">
+  </picture>
 
-    <section class="section-box">
-      <h2>Hero Image (Above the fold)</h2>
-      <p>This image is displayed immediately and affects LCP.</p>
+  <div class="spacer"></div>
 
-      <picture>
-        <source srcset="seo-hero.webp" type="image/webp">
-        <img
-          src="seo-hero.jpg"
-          alt="SEO optimization illustration"
-          width="1200"
-          height="630">
-      </picture>
-    </section>
+  <h2>Lazy Loaded Image</h2>
+  <picture>
+    <source srcset="seo-lazy.webp" type="image/webp">
+    <img src="seo-lazy.jpg" alt="SEO lazy image" width="1200" height="630" loading="lazy">
+  </picture>
 
-    <div class="large-spacer">
-      <p>Scroll down to load the next image.</p>
-    </div>
-
-    <section class="section-box">
-      <h2>Lazy Loaded Image</h2>
-      <p>This image should load only after scrolling.</p>
-
-      <picture>
-        <source srcset="seo-lazy.webp" type="image/webp">
-        <img
-          src="seo-lazy.jpg"
-          alt="SEO analytics dashboard"
-          width="1200"
-          height="630"
-          loading="lazy">
-      </picture>
-    </section>
-  </main>
-
-  <footer>
-    <hr />
-    <p>© 2026 SEO Lab Project</p>
-  </footer>
+  <hr>
+  <p>© 2026 SEO Lab Project</p>
 </body>
 </html>
