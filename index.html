@@ -9,14 +9,18 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://maxmelnik2005-wq.github.io/seo-lab-site/" />
 
-  <!-- Structured Data -->
+  <!-- Structured Data: WebSite -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "SEO Lab Test Website",
     "url": "https://maxmelnik2005-wq.github.io/seo-lab-site/",
-    "description": "SEO lab website for practicing on-page optimization, technical audit basics and structured data implementation"
+    "description": "SEO lab website for practicing on-page optimization, technical audit basics and structured data implementation.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "SEO Lab"
+    }
   }
   </script>
 </head>
@@ -24,7 +28,7 @@
 <body>
   <header>
     <h1>SEO Lab Test Website</h1>
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="index.html">Home</a> |
       <a href="about.html">About</a> |
       <a href="services.html">Services</a> |
@@ -37,53 +41,29 @@
 
   <main>
     <h2>Welcome</h2>
-    <p>This website was created for SEO on-page optimization practice.</p>
+    <p>This website was created for SEO on-page optimization practice: metadata, structured data and internal linking.</p>
 
     <h2>Start Here</h2>
     <ul>
-      <li><a href="services.html">SEO services and examples</a></li>
-      <li><a href="blog.html">SEO blog guides</a></li>
+      <li><a href="services.html">SEO services and on-page optimization examples</a></li>
+      <li><a href="blog.html">SEO blog guides (articles)</a></li>
     </ul>
 
     <h2>Latest Articles</h2>
     <ul>
-      <li><a href="blog-post1.html">What is SEO?</a></li>
-      <li><a href="blog-post2.html">Technical Audit Basics</a></li>
+      <li><a href="blog-post1.html">What is SEO? (Beginner On-Page Guide)</a></li>
+      <li><a href="blog-post2.html">Technical Audit Basics (Crawl & Indexing Checklist)</a></li>
     </ul>
 
     <h2>Image Section</h2>
-
-    <!-- Головне зображення (без lazy loading) -->
-    <picture>
-      <source srcset="merakist-l5if0iQfV4c-unsplash.webp" type="image/webp">
-      <img 
-        src="merakist-l5if0iQfV4c-unsplash.jpg"
-        alt="SEO optimization illustration"
-        width="1200"
-        height="630">
-    </picture>
-
-    <br><br>
-
-    <!-- Друге зображення (з lazy loading) -->
-    <picture>
-      <source srcset="merakist-l5if0iQfV4c-unsplash.webp" type="image/webp">
-      <img 
-        src="merakist-l5if0iQfV4c-unsplash.jpg"
-        alt="SEO analytics dashboard"
-        width="1200"
-        height="630"
-        loading="lazy">
-    </picture>
-
+    <p>
+      <img src="https://via.placeholder.com/1200x630.png?text=SEO+Lab" alt="SEO lab illustration image" width="420" />
+    </p>
   </main>
 
   <footer>
     <hr />
     <p>© 2026 SEO Lab Project</p>
-  </footer>
-</body>
-</html>
   </footer>
 </body>
 </html>
