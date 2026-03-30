@@ -1,4 +1,3 @@
 User-agent: *
-Allow: /
-
+Disallow: /services-copy.html
 Sitemap: https://maxmelnik2005-wq.github.io/seo-lab-site/sitemap.xml
