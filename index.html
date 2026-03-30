@@ -9,7 +9,6 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://maxmelnik2005-wq.github.io/seo-lab-site/" />
 
-  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -19,12 +18,64 @@
     "description": "SEO lab website for practicing on-page optimization, technical audit basics and structured data implementation"
   }
   </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #222;
+      background: #ffffff;
+    }
+
+    header, footer {
+      margin-bottom: 24px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0056b3;
+      margin-right: 8px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h1, h2 {
+      color: #111;
+    }
+
+    .hero-image,
+    .lazy-image {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+      margin: 16px 0;
+    }
+
+    .spacer {
+      height: 1200px;
+    }
+
+    .section-box {
+      padding: 20px;
+      margin: 24px 0;
+      background: #f7f9fc;
+      border: 1px solid #dbe3ee;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 
 <body>
   <header>
     <h1>SEO Lab Test Website</h1>
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="index.html">Home</a> |
       <a href="about.html">About</a> |
       <a href="services.html">Services</a> |
@@ -36,46 +87,55 @@
   </header>
 
   <main>
-    <h2>Welcome</h2>
-    <p>This website was created for SEO on-page optimization practice.</p>
+    <section class="section-box">
+      <h2>Welcome</h2>
+      <p>This website was created for SEO on-page optimization practice.</p>
 
-    <h2>Start Here</h2>
-    <ul>
-      <li><a href="services.html">SEO services and examples</a></li>
-      <li><a href="blog.html">SEO blog guides</a></li>
-    </ul>
+      <h2>Start Here</h2>
+      <ul>
+        <li><a href="services.html">SEO services and examples</a></li>
+        <li><a href="blog.html">SEO blog guides</a></li>
+      </ul>
 
-    <h2>Latest Articles</h2>
-    <ul>
-      <li><a href="blog-post1.html">What is SEO?</a></li>
-      <li><a href="blog-post2.html">Technical Audit Basics</a></li>
-    </ul>
+      <h2>Latest Articles</h2>
+      <ul>
+        <li><a href="blog-post1.html">What is SEO?</a></li>
+        <li><a href="blog-post2.html">Technical Audit Basics</a></li>
+      </ul>
+    </section>
 
-    <h2>Image Section</h2>
+    <section class="section-box">
+      <h2>Hero Image</h2>
+      <p>This is the main image above the fold, so it loads immediately.</p>
 
-    <!-- Головне зображення (без lazy loading) -->
-    <picture>
-      <source srcset="merakist-l5if0iQfV4c-unsplash.webp" type="image/webp">
-      <img 
-        src="merakist-l5if0iQfV4c-unsplash.jpg"
-        alt="SEO optimization illustration"
-        width="1200"
-        height="630">
-    </picture>
+      <picture>
+        <source srcset="merakist-l5if0iQfV4c-unsplash.webp" type="image/webp">
+        <img
+          class="hero-image"
+          src="merakist-l5if0iQfV4c-unsplash.jpg"
+          alt="SEO optimization illustration"
+          width="1200"
+          height="630">
+      </picture>
+    </section>
 
-    <br><br>
+    <div class="spacer"></div>
 
-    <!-- Друге зображення (з lazy loading) -->
-    <picture>
-      <source srcset="merakist-l5if0iQfV4c-unsplash.webp" type="image/webp">
-      <img 
-        src="merakist-l5if0iQfV4c-unsplash.jpg"
-        alt="SEO analytics dashboard"
-        width="1200"
-        height="630"
-        loading="lazy">
-    </picture>
+    <section class="section-box">
+      <h2>Lazy Loaded Image</h2>
+      <p>This image is placed lower on the page and uses lazy loading.</p>
 
+      <picture>
+        <source srcset="merakist-l5if0iQfV4c-unsplash.webp" type="image/webp">
+        <img
+          class="lazy-image"
+          src="merakist-l5if0iQfV4c-unsplash.jpg"
+          alt="SEO analytics dashboard"
+          width="1200"
+          height="630"
+          loading="lazy">
+      </picture>
+    </section>
   </main>
 
   <footer>
