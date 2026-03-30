@@ -9,6 +9,7 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://maxmelnik2005-wq.github.io/seo-lab-site/" />
 
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -48,20 +49,6 @@
       color: #111;
     }
 
-    .hero-image,
-    .lazy-image {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 10px;
-      margin: 16px 0;
-    }
-
-    .spacer {
-      height: 1200px;
-    }
-
     .section-box {
       padding: 20px;
       margin: 24px 0;
@@ -69,10 +56,23 @@
       border: 1px solid #dbe3ee;
       border-radius: 10px;
     }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+      margin-top: 16px;
+    }
+
+    .spacer {
+      height: 1200px;
+    }
   </style>
 </head>
 
 <body>
+
   <header>
     <h1>SEO Lab Test Website</h1>
     <nav aria-label="Main navigation">
@@ -87,6 +87,7 @@
   </header>
 
   <main>
+
     <section class="section-box">
       <h2>Welcome</h2>
       <p>This website was created for SEO on-page optimization practice.</p>
@@ -104,43 +105,46 @@
       </ul>
     </section>
 
+    <!-- ГОЛОВНЕ ЗОБРАЖЕННЯ -->
     <section class="section-box">
-      <h2>Hero Image</h2>
-      <p>This is the main image above the fold, so it loads immediately.</p>
+      <h2>Hero Image (Above the fold)</h2>
+      <p>This image loads immediately and affects LCP.</p>
 
       <picture>
-        <source srcset="merakist-l5if0iQfV4c-unsplash.webp" type="image/webp">
+        <source srcset="seo-hero.webp" type="image/webp">
         <img
-          class="hero-image"
-          src="merakist-l5if0iQfV4c-unsplash.jpg"
+          src="seo-hero.jpg"
           alt="SEO optimization illustration"
           width="1200"
           height="630">
       </picture>
     </section>
 
+    <!-- ВЕЛИКИЙ ПРОБІЛ -->
     <div class="spacer"></div>
 
+    <!-- LAZY ЗОБРАЖЕННЯ -->
     <section class="section-box">
       <h2>Lazy Loaded Image</h2>
-      <p>This image is placed lower on the page and uses lazy loading.</p>
+      <p>This image loads only when scrolling.</p>
 
       <picture>
-        <source srcset="merakist-l5if0iQfV4c-unsplash.webp" type="image/webp">
+        <source srcset="seo-lazy.webp" type="image/webp">
         <img
-          class="lazy-image"
-          src="merakist-l5if0iQfV4c-unsplash.jpg"
+          src="seo-lazy.jpg"
           alt="SEO analytics dashboard"
           width="1200"
           height="630"
           loading="lazy">
       </picture>
     </section>
+
   </main>
 
   <footer>
     <hr />
     <p>© 2026 SEO Lab Project</p>
   </footer>
+
 </body>
 </html>
