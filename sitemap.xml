@@ -3,26 +3,26 @@
 
   <url>
     <loc>https://maxmelnik2005-wq.github.io/seo-lab-site/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://maxmelnik2005-wq.github.io/seo-lab-site/about.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://maxmelnik2005-wq.github.io/seo-lab-site/services.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://maxmelnik2005-wq.github.io/seo-lab-site/blog.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://maxmelnik2005-wq.github.io/seo-lab-site/blog-post1.html</loc>
+  </url>
+
+  <url>
+    <loc>https://maxmelnik2005-wq.github.io/seo-lab-site/blog-post2.html</loc>
   </url>
 
 </urlset>
