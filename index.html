@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>SEO Lab Test Website</title>
   <meta name="description" content="Practice on-page SEO, image optimization, lazy loading, robots.txt and sitemap.xml.">
   <meta name="robots" content="index, follow">
@@ -28,43 +29,57 @@
 
     img {
       max-width: 100%;
-      height: auto;
       display: block;
-      margin-top: 16px;
+      margin-top: 20px;
     }
 
     .spacer {
-      height: 2500px;
+      height: 3000px; /* дуже великий відступ для lazy loading */
     }
   </style>
 </head>
+
 <body>
-  <h1>SEO Lab Test Website</h1>
 
-  <p>This website was created for SEO on-page optimization practice.</p>
+<h1>SEO Lab Test Website</h1>
 
-  <h2>Navigation</h2>
-  <p>
-    <a href="about.html">About</a> |
-    <a href="services.html">Services</a> |
-    <a href="blog.html">Blog</a>
-  </p>
+<p>This website was created for SEO on-page optimization practice.</p>
 
-  <h2>Hero Image</h2>
-  <picture>
-    <source srcset="seo-hero.webp" type="image/webp">
-    <img src="seo-hero.jpg" alt="SEO hero image" width="1200" height="630">
-  </picture>
+<h2>Navigation</h2>
+<p>
+  <a href="about.html">About</a> |
+  <a href="services.html">Services</a> |
+  <a href="blog.html">Blog</a>
+</p>
 
-  <div class="spacer"></div>
+<h2>Hero Image (loads immediately)</h2>
 
-  <h2>Lazy Loaded Image</h2>
-  <picture>
-    <source srcset="seo-lazy.webp" type="image/webp">
-    <img src="seo-lazy.jpg" alt="SEO lazy image" width="1200" height="630" loading="lazy">
-  </picture>
+<picture>
+  <source srcset="seo-hero.webp" type="image/webp">
+  <img 
+    src="seo-hero.jpg"
+    alt="SEO hero image"
+    width="1200"
+    height="630">
+</picture>
 
-  <hr>
-  <p>© 2026 SEO Lab Project</p>
+<!-- ВЕЛИКИЙ ВІДСТУП -->
+<div class="spacer"></div>
+
+<h2>Lazy Loaded Image (loads on scroll)</h2>
+
+<picture>
+  <source srcset="seo-lazy.webp" type="image/webp">
+  <img 
+    src="seo-lazy.jpg"
+    alt="SEO lazy image"
+    width="1200"
+    height="630"
+    loading="lazy">
+</picture>
+
+<hr>
+<p>© 2026 SEO Lab Project</p>
+
 </body>
 </html>
