@@ -9,13 +9,13 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://maxmelnik2005-wq.github.io/seo-lab-site/" />
 
-  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "SEO Lab Test Website",
-    "url": "https://maxmelnik2005-wq.github.io/seo-lab-site/"
+    "url": "https://maxmelnik2005-wq.github.io/seo-lab-site/",
+    "description": "SEO lab website for practicing on-page optimization, technical audit basics and structured data implementation"
   }
   </script>
 
@@ -26,78 +26,126 @@
       max-width: 1000px;
       margin: 0 auto;
       padding: 20px;
+      color: #222;
+      background: #fff;
     }
+
+    header, footer {
+      margin-bottom: 24px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0056b3;
+      margin-right: 8px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h1, h2 {
+      color: #111;
+    }
+
+    .section-box {
+      padding: 20px;
+      margin: 24px 0;
+      background: #f7f9fc;
+      border: 1px solid #dbe3ee;
+      border-radius: 10px;
+    }
+
     img {
+      width: 100%;
       max-width: 100%;
       height: auto;
+      display: block;
+      border-radius: 10px;
+      margin-top: 16px;
+    }
+
+    .large-spacer {
+      height: 2600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 18px;
+      text-align: center;
     }
   </style>
 </head>
 
 <body>
+  <header>
+    <h1>SEO Lab Test Website</h1>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="services.html">Services</a> |
+      <a href="services-copy.html">Services Copy</a> |
+      <a href="blog.html">Blog</a> |
+      <a href="old-page.html">Old Page</a>
+    </nav>
+    <hr />
+  </header>
 
-<header>
-  <h1>SEO Lab Test Website</h1>
-  <nav>
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="services.html">Services</a> |
-    <a href="services-copy.html">Services Copy</a> |
-    <a href="blog.html">Blog</a> |
-    <a href="old-page.html">Old Page</a>
-  </nav>
-  <hr />
-</header>
+  <main>
+    <section class="section-box">
+      <h2>Welcome</h2>
+      <p>This website was created for SEO on-page optimization practice.</p>
 
-<main>
+      <h2>Start Here</h2>
+      <ul>
+        <li><a href="services.html">SEO services and examples</a></li>
+        <li><a href="blog.html">SEO blog guides</a></li>
+      </ul>
 
-  <h2>Welcome</h2>
-  <p>This website was created for SEO on-page optimization practice.</p>
+      <h2>Latest Articles</h2>
+      <ul>
+        <li><a href="blog-post1.html">What is SEO?</a></li>
+        <li><a href="blog-post2.html">Technical Audit Basics</a></li>
+      </ul>
+    </section>
 
-  <h2>Start Here</h2>
-  <ul>
-    <li><a href="services.html">SEO services and examples</a></li>
-    <li><a href="blog.html">SEO blog guides</a></li>
-  </ul>
+    <section class="section-box">
+      <h2>Hero Image (Above the fold)</h2>
+      <p>This image is displayed immediately and affects LCP.</p>
 
-  <h2>Latest Articles</h2>
-  <ul>
-    <li><a href="blog-post1.html">What is SEO?</a></li>
-    <li><a href="blog-post2.html">Technical Audit Basics</a></li>
-  </ul>
+      <picture>
+        <source srcset="seo-hero.webp" type="image/webp">
+        <img
+          src="seo-hero.jpg"
+          alt="SEO optimization illustration"
+          width="1200"
+          height="630">
+      </picture>
+    </section>
 
-  <h2>Image Section</h2>
+    <div class="large-spacer">
+      <p>Scroll down to load the next image.</p>
+    </div>
 
-  <!-- ✅ ГОЛОВНЕ ЗОБРАЖЕННЯ (БЕЗ lazy loading) -->
-  <picture>
-    <source srcset="seo-hero.webp" type="image/webp">
-    <img 
-      src="seo-hero.jpg"
-      alt="SEO optimization illustration"
-      width="1200"
-      height="630">
-  </picture>
+    <section class="section-box">
+      <h2>Lazy Loaded Image</h2>
+      <p>This image should load only after scrolling.</p>
 
-  <!-- 🔥 ВІДСТУП ДЛЯ LAZY LOADING -->
-  <div style="height: 1500px;"></div>
+      <picture>
+        <source srcset="seo-lazy.webp" type="image/webp">
+        <img
+          src="seo-lazy.jpg"
+          alt="SEO analytics dashboard"
+          width="1200"
+          height="630"
+          loading="lazy">
+      </picture>
+    </section>
+  </main>
 
-  <!-- ✅ ДРУГЕ ЗОБРАЖЕННЯ (LAZY LOADING) -->
-  <picture>
-    <source srcset="seo-lazy.webp" type="image/webp">
-    <img 
-      src="seo-lazy.jpg"
-      alt="SEO analytics dashboard"
-      width="1200"
-      height="630"
-      loading="lazy">
-  </picture>
-
-</main>
-
-<footer>
-  <hr />
-  <p>© 2026 SEO Lab Project</p>
-</footer>
-
+  <footer>
+    <hr />
+    <p>© 2026 SEO Lab Project</p>
+  </footer>
 </body>
 </html>
