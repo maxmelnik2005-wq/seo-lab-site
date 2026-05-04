@@ -15,7 +15,9 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-THDH22NKZ5');
+    gtag('config', 'G-THDH22NKZ5', {
+      debug_mode: true
+    });
   </script>
 
   <!-- Structured Data -->
@@ -114,7 +116,6 @@
       </ul>
     </section>
 
-    <!-- ГОЛОВНЕ ЗОБРАЖЕННЯ -->
     <section class="section-box">
       <h2>Hero Image (Above the fold)</h2>
       <p>This image loads immediately and affects LCP.</p>
@@ -129,10 +130,8 @@
       </picture>
     </section>
 
-    <!-- ВЕЛИКИЙ ПРОБІЛ -->
     <div class="spacer"></div>
 
-    <!-- LAZY ЗОБРАЖЕННЯ -->
     <section class="section-box">
       <h2>Lazy Loaded Image</h2>
       <p>This image loads only when scrolling.</p>
@@ -154,6 +153,62 @@
     <hr />
     <p>© 2026 SEO Lab Project</p>
   </footer>
+
+  <script>
+    // 1. Відстеження кліків по посиланнях
+    document.addEventListener("click", function(e) {
+      const link = e.target.closest("a");
+
+      if (link) {
+        gtag("event", "link_click", {
+          link_text: link.textContent.trim(),
+          link_url: link.href,
+          page_location: window.location.href
+        });
+      }
+    });
+
+    // 2. Відстеження прокрутки сторінки донизу
+    let scrollBottomSent = false;
+
+    window.addEventListener("scroll", function() {
+      if (!scrollBottomSent && (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10) {
+        scrollBottomSent = true;
+
+        gtag("event", "scroll_bottom", {
+          percent_scrolled: 100,
+          page_location: window.location.href
+        });
+      }
+    });
+
+    // 3. Відстеження перегляду hero-зображення
+    window.addEventListener("load", function() {
+      gtag("event", "hero_image_view", {
+        image_name: "seo-hero.jpg",
+        section: "hero"
+      });
+    });
+
+    // 4. Відстеження перегляду lazy-зображення після скролу
+    const lazyImage = document.querySelector('img[loading="lazy"]');
+
+    if (lazyImage) {
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            gtag("event", "lazy_image_view", {
+              image_name: "seo-lazy.jpg",
+              section: "lazy_image"
+            });
+            observer.disconnect();
+          }
+        });
+      });
+
+      observer.observe(lazyImage);
+    }
+  </script>
 
 </body>
 </html>
