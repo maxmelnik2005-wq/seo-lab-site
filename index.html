@@ -1,27 +1,51 @@
 <!doctype html>
 <html lang="en">
 <head>
+
+  <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "wp3fdhxo6u");
-</script>
+  </script>
+
+  <!-- CookieYes Banner -->
+  <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/ТВІЙ_COOKIEYES_ID/script.js"></script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>On-Page SEO Practice | Meta, Schema & Links | SEO Lab</title>
+
   <meta name="description" content="Practice on-page SEO: optimized titles, meta descriptions, schema markup and internal linking. Explore pages and blog posts, then validate results today." />
+
   <meta name="robots" content="index, follow" />
+
   <link rel="canonical" href="https://maxmelnik2005-wq.github.io/seo-lab-site/" />
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Consent Mode v2 + GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-THDH22NKZ5"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag(){
+      dataLayer.push(arguments);
+    }
+
+    /* Consent Mode v2 */
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update': 500
+    });
+
     gtag('js', new Date());
+
     gtag('config', 'G-THDH22NKZ5', {
       debug_mode: true
     });
@@ -39,6 +63,7 @@
   </script>
 
   <style>
+
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
@@ -49,7 +74,8 @@
       background: #ffffff;
     }
 
-    header, footer {
+    header,
+    footer {
       margin-bottom: 24px;
     }
 
@@ -63,7 +89,8 @@
       text-decoration: underline;
     }
 
-    h1, h2 {
+    h1,
+    h2 {
       color: #111;
     }
 
@@ -86,65 +113,89 @@
     .spacer {
       height: 1200px;
     }
+
   </style>
+
 </head>
 
 <body>
 
   <header>
+
     <h1>SEO Lab Test Website</h1>
+
     <nav aria-label="Main navigation">
       <a href="index.html">Home</a> |
       <a href="about.html">About</a> |
       <a href="services.html">Services</a> |
       <a href="services-copy.html">Services Copy</a> |
       <a href="blog.html">Blog</a> |
-      <a href="old-page.html">Old Page</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
     </nav>
+
     <hr />
+
   </header>
 
   <main>
 
     <section class="section-box">
+
       <h2>Welcome</h2>
-      <p>This website was created for SEO on-page optimization practice.</p>
+
+      <p>
+        This website was created for SEO on-page optimization practice.
+      </p>
 
       <h2>Start Here</h2>
+
       <ul>
         <li><a href="services.html">Get Free SEO Tips</a></li>
         <li><a href="blog.html">SEO blog guides</a></li>
       </ul>
 
       <h2>Latest Articles</h2>
+
       <ul>
         <li><a href="blog-post1.html">What is SEO?</a></li>
         <li><a href="blog-post2.html">Technical Audit Basics</a></li>
       </ul>
+
     </section>
 
     <section class="section-box">
+
       <h2>Hero Image (Above the fold)</h2>
-      <p>This image loads immediately and affects LCP.</p>
+
+      <p>
+        This image loads immediately and affects LCP.
+      </p>
 
       <picture>
         <source srcset="seo-hero.webp" type="image/webp">
+
         <img
           src="seo-hero.jpg"
           alt="SEO optimization illustration"
           width="1200"
           height="630">
       </picture>
+
     </section>
 
     <div class="spacer"></div>
 
     <section class="section-box">
+
       <h2>Lazy Loaded Image</h2>
-      <p>This image loads only when scrolling.</p>
+
+      <p>
+        This image loads only when scrolling.
+      </p>
 
       <picture>
         <source srcset="seo-lazy.webp" type="image/webp">
+
         <img
           src="seo-lazy.jpg"
           alt="SEO analytics dashboard"
@@ -152,69 +203,98 @@
           height="630"
           loading="lazy">
       </picture>
+
     </section>
 
   </main>
 
   <footer>
+
     <hr />
+
     <p>© 2026 SEO Lab Project</p>
+
   </footer>
 
   <script>
+
     // 1. Відстеження кліків по посиланнях
     document.addEventListener("click", function(e) {
+
       const link = e.target.closest("a");
 
       if (link) {
+
         gtag("event", "link_click", {
           link_text: link.textContent.trim(),
           link_url: link.href,
           page_location: window.location.href
         });
+
       }
+
     });
 
-    // 2. Відстеження прокрутки сторінки донизу
+    // 2. Відстеження прокрутки сторінки
     let scrollBottomSent = false;
 
     window.addEventListener("scroll", function() {
-      if (!scrollBottomSent && (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10) {
+
+      if (
+        !scrollBottomSent &&
+        (window.innerHeight + window.scrollY) >=
+        document.body.offsetHeight - 10
+      ) {
+
         scrollBottomSent = true;
 
         gtag("event", "scroll_bottom", {
           percent_scrolled: 100,
           page_location: window.location.href
         });
+
       }
+
     });
 
-    // 3. Відстеження перегляду hero-зображення
+    // 3. Hero image event
     window.addEventListener("load", function() {
+
       gtag("event", "hero_image_view", {
         image_name: "seo-hero.jpg",
         section: "hero"
       });
+
     });
 
-    // 4. Відстеження перегляду lazy-зображення після скролу
+    // 4. Lazy image event
     const lazyImage = document.querySelector('img[loading="lazy"]');
 
     if (lazyImage) {
+
       const observer = new IntersectionObserver(function(entries) {
+
         entries.forEach(function(entry) {
+
           if (entry.isIntersecting) {
+
             gtag("event", "lazy_image_view", {
               image_name: "seo-lazy.jpg",
               section: "lazy_image"
             });
+
             observer.disconnect();
+
           }
+
         });
+
       });
 
       observer.observe(lazyImage);
+
     }
+
   </script>
 
 </body>
